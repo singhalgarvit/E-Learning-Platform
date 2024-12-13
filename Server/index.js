@@ -17,6 +17,8 @@ app.get('/',(req,res)=>{
 const auth = require('./Auth');
 app.use('/auth',auth)
 
+const api = require('./APIs');
+app.use('/api',api);
 
 const port=process.env.PORT;
 
