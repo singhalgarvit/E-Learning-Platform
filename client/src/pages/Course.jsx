@@ -1,11 +1,27 @@
-import React from 'react'
-import '../styles/course.css'
-import CourseContainer from '../components/CourseContainer'
-import courses from '../course.json'
+import React, {useContext, useEffect} from "react";
+import "../styles/course.css";
+import CourseContainer from "../components/CourseContainer";
+import {useCourse} from "../hooks/useCourse";
+import {CourseContext} from "../context/courseContext";
 
 function Course() {
+  const {getCourse, loading, error} = useCourse();
+  const {courses} = useContext(CourseContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await getCourse();
+      } catch (error) {
+        console.error("Something Went Wrong !!");
+      }
+    };
+    fetchData();
+  }, [courses]);
+
   return (
     <div className="coursePage">
+      {error && <h1>An Error Occured</h1>}
       {courses.map((course, index) => (
         <CourseContainer
           key={index}
@@ -19,4 +35,4 @@ function Course() {
   );
 }
 
-export default Course
+export default Course;

@@ -18,10 +18,11 @@ function AuthButtons(){
 }
 
 function Profile({logout}){
+  const name=getName();
   return(
     <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
-      <p>{getName()}</p>
       <Link onClick={logout}>Logout</Link>
+      <p title={name}>{name[0]+name[1]}</p>
     </div>
   )
 }

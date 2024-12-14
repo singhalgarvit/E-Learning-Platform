@@ -23,3 +23,10 @@ nav a{
 nav a:hover{
     background-color: #093b7b;
 }
+nav p{
+    background-color: black ;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    text-transform: uppercase;
+}
