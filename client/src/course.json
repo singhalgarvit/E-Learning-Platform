@@ -1,0 +1,58 @@
+[
+    {
+        "name":"Java Script course",
+        "category":"Online",
+        "price":99,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Web Development course",
+        "category":"Online",
+        "price":399,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Java Script course",
+        "category":"Online",
+        "price":99,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://images.unsplash.com/photo-1483817101829-339b08e8d83f?q=80&w=2004&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Web Development course",
+        "category":"Online",
+        "price":399,
+        "details":"THis is a 90 days Java Script course from basic to advanced",
+        "img":"https://images.unsplash.com/photo-1499673610122-01c7122c5dcb?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Java Script course",
+        "category":"Online",
+        "price":99,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Web Development course",
+        "category":"Online",
+        "price":399,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://images.unsplash.com/photo-1524666643752-b381eb00effb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Java Script course",
+        "category":"Online",
+        "price":99,
+        "details":"This is a 90 days Java Script course from basic to advanced",
+        "img":"https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name":"Web Development course",
+        "category":"Online",
+        "price":399,
+        "details":"THis is a 90 days Java Script course from basic to advanced",
+        "img":"https://plus.unsplash.com/premium_photo-1720287601300-cf423c3d6760?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+]

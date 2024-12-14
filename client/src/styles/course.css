@@ -1,0 +1,7 @@
+.coursePage{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: left;
+}

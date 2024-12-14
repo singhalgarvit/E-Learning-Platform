@@ -22,6 +22,10 @@ const ContentSchema = new Schema({
     url:{
         type:String
     },
+    img:{
+        type:String,
+        required:true
+    },
     course:{
         type:Schema.Types.ObjectId,
         ref:'Course',

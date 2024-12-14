@@ -1,0 +1,31 @@
+.homeContainer{
+    padding: 20px;
+}
+.homeContainer img{
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+.aboutUs{
+    width: 60%;
+    margin: auto;
+}
+.aboutUs p{
+    text-align: left;
+    font-size: 20px;
+    word-spacing: 5px;
+    background-color: rgb(216, 213, 216);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.269);
+}
+
+@media only screen and (max-width: 700px) {
+    .homeContainer img{
+        width: 90%;
+    }
+    .aboutUs{
+        width: 90%;
+    }
+}

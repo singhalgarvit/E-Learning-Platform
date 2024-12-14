@@ -1,0 +1,60 @@
+
+form{
+    border-radius: 20px;
+    width: 20%;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.251);
+    transition: 0.3s;
+}
+form:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.251);
+}
+form .inputField{
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+}
+form .inputField label{
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+form .inputField input{
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 18px;
+    padding: 5px;
+}
+form button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #1058B7;
+    color: white;
+    border: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+form button:hover{
+    background-color: transparent;
+    color: black;
+    box-shadow: 0px 0px 3px black;
+}
+font button:active{
+    box-shadow: 0px 0px 0px black;
+}
+form .showPassword{
+    text-align: left;
+    /* padding: 5px; */
+    margin:0px 0px 20px 5px;
+    -webkit-user-select: none;
+}
+form .showPassword input{
+    width: 20px;
+    scale: 1.4;
+}
