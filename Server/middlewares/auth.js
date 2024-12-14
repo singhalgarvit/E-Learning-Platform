@@ -16,7 +16,7 @@ const verifyToken = (req, res, next) => {                                     //
 
 const requireRole = (roles) => (req, res, next) => {                          //it is the middleware to check which user role has access to that route
   if (!roles.some((role) => req.user.role == role)) {                         //if required role is not found in the token role(the role we got from the frontend token)
-    return res.status(403).json('Forbidden : You have not rights to access this'); //then return the function
+    return res.status(403).json('Forbidden : You don\'t have rights to access this'); //then return the function
   }
   next();                                                                       //otherwise call next
 };
