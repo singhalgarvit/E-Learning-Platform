@@ -7,13 +7,7 @@ const connectDB = require("./database");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(
-  cors({
-    origin:['http://localhost:3000','https://shiksha-setu-frontend.vercel.app'],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Allow cookies if needed
-  })
-);
+app.use(cors());
 connectDB();
 
 app.get("/", (req, res) => {
