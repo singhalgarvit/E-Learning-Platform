@@ -42,7 +42,8 @@ function Login() {
             placeholder='john@example.com'
             value={userData.email}
             oninput={handleInputChange}
-            require="true"/>
+            require="true"
+        />
 
         <Input
             type={showPassword?"text":"password"}

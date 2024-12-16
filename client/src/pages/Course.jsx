@@ -22,13 +22,14 @@ function Course() {
   return (
     <div className="coursePage">
       {error && <h1>An Error Occured</h1>}
-      {courses.map((course, index) => (
+      {!error && courses.map((course, index) => (
         <CourseContainer
           key={index}
           name={course.name}
           img={course.img}
           details={course.details}
           price={course.price}
+          id={course._id}
         />
       ))}
     </div>

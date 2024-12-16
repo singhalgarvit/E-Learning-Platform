@@ -5,7 +5,7 @@ import logo from '../assets/ShikshaSetu.png'
 import { CgMenuRight } from "react-icons/cg";
 import { SideBarToggleContext } from '../context/sideBarToggle'
 import { AuthContext } from '../context/authContext'
-import { getRole ,getName} from '../utils'
+import { getRole ,getName, successToast} from '../utils'
 
 
 function AuthButtons(){
@@ -36,6 +36,7 @@ function Navbar() {
   const logout = ()=>{
     localStorage.removeItem("token")
     setToken(null)
+    successToast("Logout Success")
   }
 
   return (

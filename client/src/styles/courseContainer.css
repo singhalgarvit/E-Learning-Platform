@@ -25,6 +25,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .container a{
     color: white;
     background-color: #1f61b8;
@@ -35,6 +41,14 @@
 }
 .container a:hover{
     background-color: #093b7b;
+}
+.container button{
+    background-color: red;
+    border: none;
+    font-size: 22px;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
 }
 
 @media only screen and (max-width: 1300px) {

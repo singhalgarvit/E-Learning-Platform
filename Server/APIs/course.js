@@ -47,7 +47,7 @@ router.delete('/:course_id',verifyToken,requireRole(['admin']),async(req,res)=>{
     try{
         const course = await Course.findByIdAndDelete(course_id);                   //delete the course by finding its id
         if(!course)return res.status(404).json("Course Not Found")                  //If no corresponding course is found then return with 404
-        res.status(200).json(course);                                               //ohterwise respond with the course
+        res.status(200).json("Course Deleted Successfully");                                               //ohterwise respond with the course
     }catch(err){
         res.status(500).json("Something Went Wrong !!" );
     }
