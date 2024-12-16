@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/form.css'
 
-function Input({type,name,placeholder,value,oninput,checked,onchange,id,require}) {
+function Input({type,name,placeholder,value,oninput,checked,onchange,id,require,accept}) {
   return (
     <div className='inputField'>
             <label htmlFor={id}>{name}:</label>
@@ -14,7 +14,9 @@ function Input({type,name,placeholder,value,oninput,checked,onchange,id,require}
             checked={checked}
             onChange={onchange}
             id={id}
-            required={require}/>
+            required={require}
+            accept={accept}
+            />
         </div>
   )
 }

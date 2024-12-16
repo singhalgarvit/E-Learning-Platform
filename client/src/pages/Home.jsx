@@ -6,6 +6,7 @@ import pic03 from '../assets/pic03.png'
 function Home() {
   return (
     <div className="homeContainer">
+      <title>Shiksha Setu</title>
       <img src={pic02} alt="Hero Pic" />
       <img src={pic03} alt="Hero Page" />
       <div className="aboutUs">

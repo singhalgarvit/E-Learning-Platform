@@ -25,7 +25,7 @@ function CourseContainer({img, name, details, price,id}) {
       <div className="subContainer">
         <h3>{name}</h3>
         <p className="details">{details}</p>
-        <p>${price}</p>
+        <p>{price} Rs.</p>
       </div>
       <div className="buttons">
         <Link to="/">View Course</Link>

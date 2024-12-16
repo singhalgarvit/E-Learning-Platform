@@ -17,6 +17,14 @@
     padding: 0px 20px;
     text-align: left;
 }
+.subContainer h3{
+    width: 80%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .subContainer .details{
     width: 80%;
     display: -webkit-box;
