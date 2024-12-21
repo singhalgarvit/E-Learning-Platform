@@ -32,13 +32,13 @@ form .inputField input{
     width: auto;
     width: 100%;
 }
-/* form .inputField input[type="file"]::file-selector-button {
+form .inputField input[type="file"]::file-selector-button {
     background-color: #1058B7;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 3px;
-} */
+}
 
 form button{
     width: 120px;
@@ -55,8 +55,12 @@ form button:hover{
     color: black;
     box-shadow: 0px 0px 3px black;
 }
-font button:active{
+form button:active{
     box-shadow: 0px 0px 0px black;
+}
+form button:disabled{
+    opacity: 0.2;
+    cursor: none !important;
 }
 form .showPassword{
     text-align: left;

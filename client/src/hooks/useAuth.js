@@ -3,10 +3,11 @@ import { AuthContext } from "../context/authContext"
 import login from "../api/api.login";
 import signup from "../api/api.signup";
 import {successToast, errorToast} from '../utils'
+import { LoadingContext } from "../context/loadingContext";
 
 export const useAuth = () =>{
     const {token , setToken} = useContext(AuthContext);
-    const [loading, setLoading] = useState(false);
+    const {loading, setLoading} = useContext(LoadingContext)
     const [error, setError] = useState(null);
 
     const handleLogin = async (email,password) =>{
@@ -41,5 +42,5 @@ export const useAuth = () =>{
         }
     };
 
-    return {loading, error, handleLogin, handleSignup}
+    return { error, handleLogin, handleSignup}
 }

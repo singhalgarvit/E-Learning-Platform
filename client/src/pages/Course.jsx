@@ -17,7 +17,7 @@ function Course() {
       }
     };
     fetchData();
-  }, [courses]);
+  }, []);
 
   return (
     <div className="coursePage">

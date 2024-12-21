@@ -1,4 +1,4 @@
-export const getS3ImgURL = (img) =>{
+export const getS3URL = (img) =>{
     const time = Date.now();
     const fileExtension = img.name.split('.').pop();
     const filename = `shiksha_setu_image_s3_${time}.${fileExtension}`

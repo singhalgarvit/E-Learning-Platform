@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {useNavigate, Link} from "react-router-dom";
 import Input from "../components/Input";
 import "../styles/form.css";
 import {useAuth} from "../hooks/useAuth";
+import { LoadingContext } from "../context/loadingContext";
 
 function Signup() {
-  const {handleSignup, loading, error} = useAuth();
+  const {loading} = useContext(LoadingContext);
+  const {handleSignup, error} = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
     name: "",
