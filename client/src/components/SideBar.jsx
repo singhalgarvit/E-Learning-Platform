@@ -7,6 +7,7 @@ import { GrCloudDownload } from "react-icons/gr";
 import { SideBarToggleContext } from '../context/sideBarToggle';
 import { MdOutlineDashboard } from "react-icons/md";  
 import { getRole } from '../utils';
+import { AuthContext } from '../context/authContext';
 
 function SideBar() {
     const {toggle,setToggle} = useContext(SideBarToggleContext);
@@ -16,7 +17,7 @@ function SideBar() {
             <ul>
                 <Link onClick={(e)=>setToggle(!toggle)} to='/'><li><FiHome /> Home</li></Link>
                 <Link onClick={(e)=>setToggle(!toggle)} to='/course'><li><RiGraduationCapLine /> Courses</li></Link>
-                <Link onClick={(e)=>setToggle(!toggle)} to='/purchase'><li><GrCloudDownload /> Purchases</li></Link>
+                {(role == "student") && <Link onClick={(e)=>setToggle(!toggle)} to='/MyCourses'><li><GrCloudDownload /> My Courses</li></Link>}
                 {(role== "admin")?<Link onClick={(e)=>setToggle(!toggle)} to='/admin/dashboard'><li><MdOutlineDashboard />Dashboard</li></Link>:""}
             </ul>
     </div>

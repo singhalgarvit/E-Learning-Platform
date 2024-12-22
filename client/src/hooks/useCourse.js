@@ -1,12 +1,12 @@
 import {useContext, useState} from "react";
 import {CourseContext} from "../context/courseContext";
-import {getAllCourses, createCourse, deleteCourseById} from "../api/api.course";
-import { errorToast, successToast } from "../utils";
-import { LoadingContext } from "../context/loadingContext";
+import { getAllCourses, createCourse, deleteCourseById, purchaseCourse,getMyPurchasedCourses} from "../api/api.course";
+import {errorToast, successToast} from "../utils";
+import {LoadingContext} from "../context/loadingContext";
 
 export const useCourse = () => {
-  const {courses, setCourses} = useContext(CourseContext);
-  const {loading, setLoading} = useContext(LoadingContext)
+  const {setCourses, setMyCourses} = useContext(CourseContext);
+  const {loading, setLoading} = useContext(LoadingContext);
   const [error, setError] = useState(null);
 
   const getCourse = async () => {
@@ -23,13 +23,13 @@ export const useCourse = () => {
     }
   };
 
-  const setCourse = async (courseData,token) => {
+  const setCourse = async (courseData, token) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await createCourse(courseData,token);
-      successToast(data)
-      return "Success"
+      const data = await createCourse(courseData, token);
+      successToast(data);
+      return "Success";
     } catch (err) {
       setError(err.message);
       errorToast(err.message);
@@ -38,15 +38,15 @@ export const useCourse = () => {
     }
   };
 
-  const deleteCourse = async (courseId,token) => {
+  const deleteCourse = async (courseId, token) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await deleteCourseById(courseId,token);
+      const data = await deleteCourseById(courseId, token);
       setCourses((prevCourses) =>
         prevCourses.filter((course) => course._id !== courseId)
       );
-      successToast(data)
+      successToast(data);
     } catch (err) {
       setError(err.message);
       errorToast(err.message);
@@ -55,7 +55,34 @@ export const useCourse = () => {
     }
   };
 
-  
+  const buyCourse = async (course_id, token) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await purchaseCourse(course_id, token);
+      successToast(data);
+      return "Success";
+    } catch (err) {
+      setError(err.message);
+      errorToast(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  return {getCourse, setCourse, deleteCourse, error};
+  const getMyCourses = async ( token) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await getMyPurchasedCourses(token);
+      setMyCourses(data);
+    } catch (err) {
+      setError(err.message);
+      errorToast(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return {getCourse, setCourse, deleteCourse, buyCourse,getMyCourses, error};
 };

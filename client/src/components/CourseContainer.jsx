@@ -28,7 +28,7 @@ function CourseContainer({img, name, details, price,id}) {
         <p>{price} Rs.</p>
       </div>
       <div className="buttons">
-        <Link to="/">View Course</Link>
+        <Link to={`/course/${id}`}>View Course</Link>
         {role == "admin" && (
           <button onClick={handleDeleteCourse}>
             <MdDeleteOutline />

@@ -3,15 +3,17 @@ import "../styles/course.css";
 import CourseContainer from "../components/CourseContainer";
 import {useCourse} from "../hooks/useCourse";
 import {CourseContext} from "../context/courseContext";
+import {AuthContext} from "../context/authContext";
 
-function Course() {
-  const {getCourse, loading, error} = useCourse();
-  const {courses} = useContext(CourseContext);
+function MyCourse() {
+  const {getMyCourses, error} = useCourse();
+  const {myCourses} = useContext(CourseContext);
+  const {token} = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await getCourse();
+        await getMyCourses(token);
       } catch (error) {
         console.error("Something Went Wrong !!");
       }
@@ -21,12 +23,13 @@ function Course() {
 
   return (
     <>
-      <h1>All Courses</h1>
+      <h1>My Courses</h1>
       <div className="coursePage">
         <title>Courses</title>
         {error && <h1>An Error Occured</h1>}
+        {myCourses.length == 0 && <h3>No Course Found</h3>}
         {!error &&
-          courses.map((course, index) => (
+          myCourses.map((course, index) => (
             <CourseContainer
               key={index}
               name={course.name}
@@ -41,4 +44,4 @@ function Course() {
   );
 }
 
-export default Course;
+export default MyCourse;

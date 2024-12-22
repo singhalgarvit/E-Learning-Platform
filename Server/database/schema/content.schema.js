@@ -14,15 +14,7 @@ const ContentSchema = new Schema({
         type:String,
         required:true
     },
-    type:{
-        type:String,
-        enum:['video','image','text','audio'],
-        required:true
-    },
     url:{
-        type:String
-    },
-    img:{
         type:String,
         required:true
     },
