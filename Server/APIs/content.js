@@ -14,7 +14,7 @@ const hasPurchased = require('../middlewares/hasPurchased');
 
 router.get('/',verifyToken,hasPurchased(true),async(req,res)=>{                                          //To find the course by courseId
     const course_id = req.headers.course_id;
-    try{
+    try{    
         const content = await Content.find({course:course_id});
         if(!content)return res.status(404).json("Content Not Found")                  //If no corresponding course is found then return with 404
         res.status(200).json(content);                                               //ohterwise respond with the course

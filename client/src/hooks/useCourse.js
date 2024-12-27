@@ -9,7 +9,7 @@ export const useCourse = () => {
   const {loading, setLoading} = useContext(LoadingContext);
   const [error, setError] = useState(null);
 
-  const getCourse = async () => {
+  const getCourse = async () => {                     //To get all the courses 
     setLoading(true);
     setError(null);
     try {
@@ -23,7 +23,7 @@ export const useCourse = () => {
     }
   };
 
-  const setCourse = async (courseData, token) => {
+  const setCourse = async (courseData, token) => {        //Admin API to create Course 
     setLoading(true);
     setError(null);
     try {
@@ -38,7 +38,7 @@ export const useCourse = () => {
     }
   };
 
-  const deleteCourse = async (courseId, token) => {
+  const deleteCourse = async (courseId, token) => {         //Admin API to delete a course
     setLoading(true);
     setError(null);
     try {
@@ -55,7 +55,7 @@ export const useCourse = () => {
     }
   };
 
-  const buyCourse = async (course_id, token) => {
+  const buyCourse = async (course_id, token) => {             //Student API to Buy a Course 
     setLoading(true);
     setError(null);
     try {
@@ -70,7 +70,7 @@ export const useCourse = () => {
     }
   };
 
-  const getMyCourses = async ( token) => {
+  const getMyCourses = async ( token) => {                //Student API to get his purchased courses
     setLoading(true);
     setError(null);
     try {

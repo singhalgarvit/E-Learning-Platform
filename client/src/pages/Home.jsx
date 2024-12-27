@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../styles/home.css'
 import pic02 from '../assets/pic02.jpg'
 import pic03 from '../assets/pic03.png'
+import { AuthContext } from '../context/authContext';
+import { useCourse } from '../hooks/useCourse';
+
+
 
 function Home() {
+  const {token} = useContext(AuthContext)
+  const {getMyCourses} = useCourse();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await getMyCourses(token);
+      } catch (error) {
+        console.error("Something Went Wrong !!");
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div className="homeContainer">
       <title>Shiksha Setu</title>
