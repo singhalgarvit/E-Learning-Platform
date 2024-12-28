@@ -4,7 +4,7 @@ const hasPurchased = (bool) => async (req, res, next) => {
   const course_id = req.headers.course_id;
   const getUser = await User.findOne({email: req.user.email});
   if (req.user.role === "admin") {
-    next();
+  return next();
   }
   if (!getUser.courses.includes(course_id) && bool === false) {
     next();
