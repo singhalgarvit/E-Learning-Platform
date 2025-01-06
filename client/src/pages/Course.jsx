@@ -3,18 +3,16 @@ import "../styles/course.css";
 import CourseContainer from "../components/CourseContainer";
 import {useCourse} from "../hooks/useCourse";
 import {CourseContext} from "../context/courseContext";
+import { AuthContext } from "../context/authContext";
 
 function Course() {
-  const {getCourse, loading, error} = useCourse();
+  const {token} = useContext(AuthContext)
+  const {getCourse, getMyCourses, error} = useCourse();
   const {courses} = useContext(CourseContext);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        await getCourse();
-      } catch (error) {
-        console.error("Something Went Wrong !!");
-      }
+       const res= await getCourse();
     };
     fetchData();
   }, []);

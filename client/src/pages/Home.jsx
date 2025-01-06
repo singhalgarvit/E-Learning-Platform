@@ -8,18 +8,8 @@ import { useCourse } from '../hooks/useCourse';
 
 
 function Home() {
-  const {token} = useContext(AuthContext)
-  const {getMyCourses} = useCourse();
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await getMyCourses(token);
-      } catch (error) {
-        console.error("Something Went Wrong !!");
-      }
-    };
-    fetchData();
-  }, []);
+
+
   return (
     <div className="homeContainer">
       <title>Shiksha Setu</title>

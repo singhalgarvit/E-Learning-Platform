@@ -15,6 +15,7 @@ export const useCourse = () => {
     try {
       const data = await getAllCourses();
       setCourses(data);
+      return "success";
     } catch (err) {
       setError(err.message);
       errorToast(err.message);

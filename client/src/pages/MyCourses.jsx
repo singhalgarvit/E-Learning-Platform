@@ -12,11 +12,7 @@ function MyCourse() {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
         await getMyCourses(token);
-      } catch (error) {
-        console.error("Something Went Wrong !!");
-      }
     };
     fetchData();
   }, []);
