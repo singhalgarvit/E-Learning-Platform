@@ -55,11 +55,11 @@ export const useCourse = () => {
     }
   };
 
-  const buyCourse = async (course_id, token) => {             //Student API to Buy a Course 
+  const buyCourse = async (course_id, token, price) => {             //Student API to Buy a Course 
     setLoading(true);
     setError(null);
     try {
-      const data = await purchaseCourse(course_id, token);
+      const data = await purchaseCourse(course_id, token, price);
       successToast(data);
       return "Success";
     } catch (err) {

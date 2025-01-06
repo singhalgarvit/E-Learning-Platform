@@ -19,7 +19,7 @@ function CourseDetail() {
     const {buyCourse} = useCourse();
     const handlePurchase = async () =>{
       try{
-       const res= await buyCourse(course_id,token)
+       const res= await buyCourse(course_id,token,detail[0].price)
        if(res) navigate("/MyCourses")
       }catch(err){
         console.error(err);

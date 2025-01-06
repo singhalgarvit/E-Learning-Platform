@@ -26,7 +26,7 @@ function Content({course_id}) {
         content.map((content, index) => (
           <div className="containerContent" key={index} style={{border:"2px solid black",margin:"55px"}}>
             <img src={content.url} alt="" style={{width:"100px"}}/>
-            <p >{content.name}</p>
+            <p>{content.name}</p>
             <p>{content.description}</p>
           </div>
         ))}
